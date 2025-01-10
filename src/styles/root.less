@@ -462,11 +462,9 @@
 @media only screen and (min-width: 0rem) {
     #services-1330 {
         padding: var(--sectionPadding);
-        padding-top:(150/16rem);
-        margin-top:10rem;
-        
-        
-  
+        padding-top: (150/16rem);
+        margin-top: 10rem;
+    
         .cs-container {
             width: 100%;
             max-width: (1280/16rem);
@@ -474,124 +472,121 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* 48px - 64px */
             gap: clamp(3rem, 6vw, 4rem);
         }
-  
+    
         .cs-content {
             width: 100%;
             display: flex;
             flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
             align-items: center;
-            /* set text align to left if content needs to be left aligned */
             text-align: center;
         }
-  
+    
         .cs-title {
-            margin-top:(32/16rem);
+            margin-top: (32/16rem);
             color: var(--bodyTextColor);
         }
-  
+    
         .cs-text {
             margin-bottom: (16/16rem);
             color: var(--bodyTextColor);
             opacity: 0.8;
-  
+    
             &:last-of-type {
                 margin-bottom: (32/16rem);
             }
         }
-
-      
-      
-  
+    
         .cs-card-group {
             width: 100%;
-            max-width: (847/16rem);
             margin: 0;
             padding: 0;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
             gap: (16/16rem);
         }
-  
+    
         .cs-item {
             list-style: none;
-            /* .cs-h3 and .cs-item-text both use text-align: inherit, so change the below to affect the whole item */
             text-align: left;
             width: 100%;
             margin: 0;
             box-sizing: border-box;
-            /* 20px - 48px */
             padding: clamp(1.25rem, 2.2vw + 1rem, 3rem);
             background-color: transparent;
             display: flex;
-            grid-column: span 12;
             flex-direction: column;
             transition: background-color 0.4s ease, border-color 0.4s;
-  
+    
             &:hover {
                 background: #000;
-
+    
                 .cs-h3 {
                     color: var(--primary);
                 }
-
-                .cs-item-text {
-                    color: #fff;
-                }
-
+    
+                .cs-item-text,
                 .cs-li {
                     color: #fff;
                 }
-
+    
                 .cs-icon {
                     transform: rotateY(360deg) translateY(-0.25rem);
-                    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);                  
+                    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
                 }
-
-                
             }
         }
-
+    
+        .cs-sub-ul {
+            padding-left: 1.5rem;
+            margin: 0.5rem 0;
+    
+            .cs-sub-li {
+                list-style-type: disc;
+                color: var(--bodyTextColor);
+                margin: 0.25rem 0;
+    
+                &:hover {
+                    color: var(--primary);
+                }
+            }
+        }
+    
         .hover-effect {
             background: #000;
-        
+    
             .cs-h3 {
                 color: var(--primary);
             }
-        
-            .cs-item-text {
-                color: #fff;
-            }
-        
+    
+            .cs-item-text,
             .cs-li {
                 color: #fff;
             }
-        
+    
             .cs-icon {
                 transform: rotateY(360deg) translateY(-0.25rem);
                 filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
                 transition: transform 0.5s ease, filter 0.5s ease;
             }
         }
+    
         .cs-picture {
             margin-bottom: (20/16rem);
             border-radius: 50%;
             position: relative;
-            /* prevents flexbox from squishing it */
             flex: none;
         }
-  
+    
         .cs-icon {
             width: (30/16rem);
             height: auto;
             display: block;
             transition: transform 0.5s;
         }
-  
+    
         .cs-h3 {
             font-size: (20/16rem);
             text-align: inherit;
@@ -601,19 +596,27 @@
             color: var(--bodyTextColor);
             transition: color 0.3s;
         }
-  
+    
         .cs-item-text {
-            /* 14px - 16px */
             font-size: clamp(0.875rem, 1.5vw, 1rem);
             text-align: inherit;
             line-height: 1.5em;
             margin: 0;
             color: var(--bodyTextColor);
             opacity: 0.8;
-  
+        }
+    
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+    
+            &:hover {
+                color: var(--secondary);
+            }
         }
     }
-  }
+}    
 
   /* Tablet - 768px */
   @media only screen and (min-width: 48rem) {
@@ -632,9 +635,7 @@
   @media only screen and (min-width: 64rem) {
     #services-1330 {
         padding-top:(100/16rem);
-        .cs-container {
-            flex-direction: column;
-        }
+       
   
         .cs-content {
             max-width: (1200/16rem);
@@ -649,7 +650,7 @@
         }
   
         .cs-item {
-            max-width: none;
+            width: 100%;
         }
     }
   }
@@ -671,6 +672,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             /* 48px - 64px */
             gap: clamp(3rem, 6vw, 4rem);
         }
@@ -683,6 +685,7 @@
             flex-direction: column;
             /* centers content horizontally, set to flex-start to left align */
             align-items: center;
+            
         }
 
         .cs-title {
@@ -700,7 +703,8 @@
             width: 100%;
             margin: 0;
             padding: 0;
-            display: grid;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             gap: (16/16rem);
         }
@@ -800,12 +804,7 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #services-1201 {
-        .cs-content {
-            text-align: left;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: end;
-        }
+       
 
 
         .cs-card-group {
