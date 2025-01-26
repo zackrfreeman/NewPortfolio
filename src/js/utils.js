@@ -9,5 +9,6 @@ export async function getOptimizedImage(image) {
   return optimizedImage
 }
 
+
 // Learn more agout the getImage() function here
 // https://docs.astro.build/en/guides/images/#generating-images-with-getimage
