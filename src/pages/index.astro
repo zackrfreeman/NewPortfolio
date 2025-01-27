@@ -4,7 +4,7 @@ import CTA from "../components/CTA.astro";
 
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
 import {getOptimizedImage} from "../js/utils"
-import landingImage from "../assets/images/bg.png" // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
+import landingImage from "../assets/images/head.webp" // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
 const optimizedImage = await getOptimizedImage(landingImage)
 ---
 
@@ -26,7 +26,7 @@ const optimizedImage = await getOptimizedImage(landingImage)
                 <span
                    class="txt-rotate"
                    data-period="2000"
-                   data-rotate='[ "My name is Zachary Freeman.", "Welcome to my resume.", "I create solutions.", "I advance healthcare technology!" ]'></span>
+                   data-rotate='[ "My name is Zachary Freeman.", "Welcome to my resume." ]'></span>
               </h1>
   
               <h2 class="cs-text">Experienced Professional in IT, Sleep Medicine, and Business Solutions</h2>
@@ -39,9 +39,9 @@ const optimizedImage = await getOptimizedImage(landingImage)
   
     <!-- Background Image -->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="../assets/images/bg.png">
-        <source media="(min-width: 601px)" srcset="../assets/images/bg.png">
-        <img loading="lazy" decoding="async" src="../assets/images/bg.png" alt="professional background" width="1920" height="1200" aria-hidden="true">
+        <source media="(max-width: 600px)" srcset="/assets/images/head.webp">
+        <source media="(min-width: 601px)" srcset="/assets/images/head.webp">
+        <img loading="lazy" decoding="async" src="/assets/images/head.webp" alt="professional background" width="1920" height="1200" aria-hidden="true">
     </picture>
   </section>
   
@@ -76,7 +76,7 @@ const optimizedImage = await getOptimizedImage(landingImage)
                 <button class="cs-option" data-filter="five">
                     Publications
                 </button>
-                <button class="cs-option" data-filter="sixe">
+                <button class="cs-option" data-filter="six">
                     Refrences
                 </button>
             </div>
@@ -214,28 +214,28 @@ const optimizedImage = await getOptimizedImage(landingImage)
                                 
                             </span>
                         </button>
-                        <p class="cs-item-p">
-                            ●	Oversee all clinical operations for TriCity Lung & Sleep, managing a team of 3 full/part-time clinical staff and up to 4 support staff across 3 full-service sleep disorder centers and a central office/pulmonary clinic, generating annual revenue exceeding $500,000.<br><br>
-                            ●	Successfully managed accreditation processes for three sleep labs by the American Academy of Sleep Medicine (AASM) and one by The Joint Commission.<br><br>
-                            ●	Manage operations for the main office, supervising a team of four and coordinating sleep labs and weekly pulmonary care.<br><br>
-                            ●	Lead the design and development of the company’s public website (www.TriCityLS.com), improving patient engagement and accessibility.<br><br>
-                            ●	Designed and implemented a company-wide SharePoint site to streamline internal communication, document management, and workflow processes.<br><br>
-                            ●	Supervise and mentor staff, ensuring compliance with AASM guidelines and optimizing operational efficiency to enhance patient care.<br><br>
-                            ●	Provide patient education, including PAP therapy management and follow-up support, maintaining PAP compliance rates ranging 70-90%.<br><br>
-                            ●	Performed polysomnographic studies, including:<br>
-
-                            ▪	Standard baseline PSGs<br>
-                            ▪	Pediatric PSGs with End Tidal Capnography<br>
-                            ▪	Full 10-20 seizure/parasomnia montage PSGs<br>
-                            ▪	CPAP, BiLevel, ASV, Spontaneous-Timed, and AVAPS titrations.<br><br>
-
-                            ●	Organized and facilitated "Free CPAP Clinic" appointments and support group functions, providing education and support to the community.
-                            ●	Established a home sleep apnea testing program with comprehensive patient education and follow-up.<br><br>
-                            ●	Designed and implemented policy and procedure manuals in adherence to AASM guidelines under the direction of the Sleep Medicine Director.<br><br>
-                            ●	Developed and maintained a quality improvement program aligned with AASM standards and performance benchmarks.<br><br>
-                            ●	Trained and supervised sleep technologists and support staff, fostering a skilled and efficient team.
-                               
-                        </p>
+                        <ul class="cs-item-p">
+                            <li>Oversee all clinical operations for TriCity Lung & Sleep, managing a team of 3 full/part-time clinical staff and up to 4 support staff across 3 full-service sleep disorder centers and a central office/pulmonary clinic, generating annual revenue exceeding $500,000.</li>
+                            <li>Successfully managed accreditation processes for three sleep labs by the American Academy of Sleep Medicine (AASM) and one by The Joint Commission.</li>
+                            <li>Manage operations for the main office, supervising a team of four and coordinating sleep labs and weekly pulmonary care.</li>
+                            <li>Lead the design and development of the company’s public website (<a href="http://www.TriCityLS.com" target="_blank">www.TriCityLS.com</a>), improving patient engagement and accessibility.</li>
+                            <li>Designed and implemented a company-wide SharePoint site to streamline internal communication, document management, and workflow processes.</li>
+                            <li>Supervise and mentor staff, ensuring compliance with AASM guidelines and optimizing operational efficiency to enhance patient care.</li>
+                            <li>Provide patient education, including PAP therapy management and follow-up support, maintaining PAP compliance rates ranging 70-90%.</li>
+                            <li>Performed polysomnographic studies, including:
+                                <ul>
+                                    <li>Standard baseline PSGs</li>
+                                    <li>Pediatric PSGs with End Tidal Capnography</li>
+                                    <li>Full 10-20 seizure/parasomnia montage PSGs</li>
+                                    <li>CPAP, BiLevel, ASV, Spontaneous-Timed, and AVAPS titrations</li>
+                                </ul>
+                            </li>
+                            <li>Organized and facilitated "Free CPAP Clinic" appointments and support group functions, providing education and support to the community.</li>
+                            <li>Established a home sleep apnea testing program with comprehensive patient education and follow-up.</li>
+                            <li>Designed and implemented policy and procedure manuals in adherence to AASM guidelines under the direction of the Sleep Medicine Director.</li>
+                            <li>Developed and maintained a quality improvement program aligned with AASM standards and performance benchmarks.</li>
+                            <li>Trained and supervised sleep technologists and support staff, fostering a skilled and efficient team.</li>
+                        </ul>
                     </li>
                     <li class="cs-faq-item">
                         <button class="cs-button">
@@ -245,78 +245,85 @@ const optimizedImage = await getOptimizedImage(landingImage)
 
                             </span>
                         </button>
-                        <p class="cs-item-p">
-                            ●	Supervised up to 10 Sleep Technologists and 4 Medical Receptionists across four locations.
-                            ●	Trained and oriented Sleep Technologists to perform advanced procedures, including:
-                            
-                            ▪	Standard baseline PSGs, pediatric PSGs with End Tidal Capnography, and 10-20 seizure/parasomnia montage PSGs.
-                            ▪	CPAP, BiLevel, ASV, Spontaneous-Timed, and AVAPS titrations.
-                            ▪	Urinalysis collection, MSLTs, MWTs, PAP Naps, and sleep study scoring.
-                            ▪	EKG recognition, behavioral observations for parasomnias, recognition of unambiguous EEG activity, and emergency procedures.
-                            
-                            ●	Trained Medical Reception staff in phone triage, sleep therapy inquiries, prescription management, and patient assessment, including collecting vitals and preparing relevant information for providers.
-                            ●	Implemented processes for appointment scheduling, follow-ups, equipment handling, and patient account counseling, ensuring seamless clinical operations.
-                            ●	Developed quality assurance performance improvement plans (PIPs), including:
-                            
-                            ▪	Completing PIP sheets, quarterly reports, inter-scorer reliability reviews, sleep study evaluations, and infection control monitoring.
-                            
-                            ●	Established effective communication channels with staff to maintain a team-oriented atmosphere, resolve conflicts, enhance retention, and attract new hires by fostering a supportive and collaborative work environment. Regularly liaised with the Medical Director and department heads.
-                            ●	Monitored trends in DME performance, referrals, diagnoses, and scheduling to optimize operations and address identified issues.
-                            ●	Set education and training goals based on quality assurance data, delivering training through regular staff and shift meetings.
-                            ●	Designed and implemented workflows and programs, including:
-                            
-                            ▪	Out-of-Center Testing procedures following AASM guidelines.
-                            ▪	AWAKE (Awake, Alert, and Keeping Energized) CPAP support groups in Michigan, aligned with American Sleep Apnea Association standards.
-                            ▪	Policies for PAP Naps, Department of Transportation patient processing, and intake procedures.
-                            
-                            ●	Authored policies for the policy and procedure manual, including:
-                            
-                            ▪	Home Sleep Testing guidelines.
-                            ▪	Oral Device Use for Obstructive Sleep Apnea treatment.
-                            ▪	Precautions for shift workers.
-                            
-                            ●	Designed and implemented departmental processes, including:
-                            
-                            ▪	Patient results communication.
-                            ▪	Triage of high-priority cases post-sleep study.
-                            ▪	Documentation standards for Medical Receptionists and Medical Assistants.
-                            
-                            ●	Designed and established sleep labs and testing rooms, including:
-                            
-                            ▪	Selecting and purchasing furniture, equipment, and computers.
-                            ▪	Creating layouts and décor for functional and welcoming spaces.
-                            ▪	Installing and configuring Local Area Networks (LANs).
-                            ▪	Installation and configuration of Respironics and Sandman sleep systems.
-                            
-                            ●	Provided computer and network troubleshooting, repair, and consultation for various departments.
-                            ●	Led the implementation of new Electronic Medical Records (EMR) systems, including staff training and workflow integration.
-                            
-                        </p>
+                        <ul class="cs-item-p">
+                                <li>Supervised up to 10 Sleep Technologists and 4 Medical Receptionists across four locations.</li>
+                                <li>Trained and oriented Sleep Technologists to perform advanced procedures, including:
+                                  <ul class="cs-item-q">
+                                    <li>Standard baseline PSGs, pediatric PSGs with End Tidal Capnography, and 10-20 seizure/parasomnia montage PSGs.</li>
+                                    <li>CPAP, BiLevel, ASV, Spontaneous-Timed, and AVAPS titrations.</li>
+                                    <li>Urinalysis collection, MSLTs, MWTs, PAP Naps, and sleep study scoring.</li>
+                                    <li>EKG recognition, behavioral observations for parasomnias, recognition of unambiguous EEG activity, and emergency procedures.</li>
+                                  </ul>
+                                <li>Trained Medical Reception staff in phone triage, sleep therapy inquiries, prescription management, and patient assessment, including collecting vitals and preparing relevant information for providers.</li>
+                                <li>Implemented processes for appointment scheduling, follow-ups, equipment handling, and patient account counseling, ensuring seamless clinical operations.</li>
+                                <li>Developed quality assurance performance improvement plans (PIPs), including:
+                                  <ul class="cs-item-q">
+                                    <li>Completing PIP sheets, quarterly reports, inter-scorer reliability reviews, sleep study evaluations, and infection control monitoring.</li>
+                                  </ul>
+                                </li>
+                                <li>Established effective communication channels with staff to maintain a team-oriented atmosphere, resolve conflicts, enhance retention, and attract new hires by fostering a supportive and collaborative work environment. Regularly liaised with the Medical Director and department heads.</li>
+                                <li>Monitored trends in DME performance, referrals, diagnoses, and scheduling to optimize operations and address identified issues.</li>
+                                <li>Set education and training goals based on quality assurance data, delivering training through regular staff and shift meetings.</li>
+                                <li>Designed and implemented workflows and programs, including:
+                                  <ul class="cs-item-q">
+                                    <li>Out-of-Center Testing procedures following AASM guidelines.</li>
+                                    <li>AWAKE (Awake, Alert, and Keeping Energized) CPAP support groups in Michigan, aligned with American Sleep Apnea Association standards.</li>
+                                    <li>Policies for PAP Naps, Department of Transportation patient processing, and intake procedures.</li>
+                                  </ul>
+                                </li>
+                                <li>Authored policies for the policy and procedure manual, including:
+                                  <ul class="cs-item-q">
+                                    <li>Home Sleep Testing guidelines.</li>
+                                    <li>Oral Device Use for Obstructive Sleep Apnea treatment.</li>
+                                    <li>Precautions for shift workers.</li>
+                                  </ul>
+                                </li>
+                                <li>Designed and implemented departmental processes, including:
+                                  <ul class="cs-item-q">
+                                    <li>Patient results communication.</li>
+                                    <li>Triage of high-priority cases post-sleep study.</li>
+                                    <li>Documentation standards for Medical Receptionists and Medical Assistants.</li>
+                                  </ul>
+                                </li>
+                                <li>Designed and established sleep labs and testing rooms, including:
+                                  <ul class="cs-item-q">
+                                    <li>Selecting and purchasing furniture, equipment, and computers.</li>
+                                    <li>Creating layouts and décor for functional and welcoming spaces.</li>
+                                    <li>Installing and configuring Local Area Networks (LANs).</li>
+                                    <li>Installation and configuration of Respironics and Sandman sleep systems.</li>
+                                  </ul>
+                                </li>
+                                <li>Provided computer and network troubleshooting, repair, and consultation for various departments.</li>
+                                <li>Led the implementation of new Electronic Medical Records (EMR) systems, including staff training and workflow integration.</li>
+                        </ul>
                     </li>
                     <li class="cs-faq-item">
                         <button class="cs-button">
                             <span class="cs-button-text">
                                 Polysomnographic Technician/ Lead Technician January 2005 – December 2005
-Michigan Sleep Diagnostics and Research Center | Beecher Rd Flint, MI 48532
+                                Michigan Sleep Diagnostics and Research Center | Beecher Rd Flint, MI 48532
 
                             </span>
                         </button>
-                        <p class="cs-item-p">
-                            ●	Gained expertise in performing a wide range of sleep studies, including:
+                        <ul class="cs-item-p">
+                            <li>Gained expertise in performing a wide range of sleep studies, including:
+                                <ul>
+                                  <li>Standard baseline PSGs and pediatric PSGs with End Tidal Capnography.</li>
+                                  <li>Full 10-20 seizure/parasomnia montage PSGs.</li>
+                                  <li>CPAP, BiLevel, and Spontaneous-Timed titrations.</li>
+                                  <li>Urinalysis collection, MSLTs, MWTs, and PAP Naps.</li>
+                                </ul>
+                              </li>
+                              <li>Developed competencies in EKG recognition, sleep study scoring, behavioral observations for parasomnias, recognition of EEG activity, and emergency/sentinel event protocols.</li>
+                              <li>Promoted to Lead Technician, assuming additional responsibilities for:
+                                <ul>
+                                  <li>Sleep study scoring.</li>
+                                  <li>Managing inventory and supplies.</li>
+                                  <li>Scheduling staff to ensure adequate coverage and efficient lab operations.</li>
+                                </ul>
+                              </li>
 
-▪	Standard baseline PSGs and pediatric PSGs with End Tidal Capnography.
-▪	Full 10-20 seizure/parasomnia montage PSGs.
-▪	CPAP, BiLevel, and Spontaneous-Timed titrations.
-▪	Urinalysis collection, MSLTs, MWTs, and PAP Naps.
-
-●	Developed competencies in EKG recognition, sleep study scoring, behavioral observations for parasomnias, recognition of EEG activity, and emergency/sentinel event protocols.
-●	Promoted to Lead Technician, assuming additional responsibilities for:
-
-▪	Sleep study scoring.
-▪	Managing inventory and supplies.
-▪	Scheduling staff to ensure adequate coverage and efficient lab operations.
-
-                        </p>
+                            </ul>
                     </li>
                     
                 </ul>
@@ -328,16 +335,14 @@ Michigan Sleep Diagnostics and Research Center | Beecher Rd Flint, MI 48532
                                 Textbook Contributions
                             </span>
                         </button>
-                        <p class="cs-item-p">
-                            ●	Fundamentals of Sleep Technology
-                                    Author(s): Teofilo L. Lee-Chiong, Jr. MD, Cynthia Mattice MS, RPSGT, RST, Rita Brooks MEd, R EEG/EP T
-                                    ISBN: 9781975111625 | Publication Date: May 21, 2019
-                                    ▪	Chapter 49: Advanced Positive Airway Pressure Therapies for Sleep-Disordered Breathing
-                                    Co-authored with Saad S. Ahmad
-                                    ▪	Chapter 54: Other Therapies for Obstructive Sleep Apnea
-                                    Co-authored with Saad S. Ahmad
-
-                        </p>
+                        <ul class="cs-item-p">
+                            <li><em>Fundamentals of Sleep Technology</em> | Author(s): Teofilo L. Lee-Chiong, Jr. MD, Cynthia Mattice MS, RPSGT, RST, Rita Brooks MEd, R EEG/EP T
+                                ISBN: 9781975111625 | Publication Date: May 21, 2019</li>
+                                <ul>
+                                    <li>Chapter 49: Advanced Positive Airway Pressure Therapies for Sleep-Disordered Breathing | Co-authored with Saad S. Ahmad</li>
+                                   <li>Chapter 54: Other Therapies for Obstructive Sleep Apnea | Co-authored with Saad S. Ahmad</li>
+                                </ul>
+                        </ul>
                     </li>
                     <li class="cs-faq-item">
                         <button class="cs-button">
@@ -345,11 +350,10 @@ Michigan Sleep Diagnostics and Research Center | Beecher Rd Flint, MI 48532
                                 American Association of Sleep Technologists - Blog Page
                             </span>
                         </button>
-                        <p class="cs-item-p">
-                            ●	Positional Therapy – Is it Especially Helpful for Full Face CPAP Mask Patients?, August 2016
-                            ●	How to Work Hard at PAP Adherence, May 2016
-                            
-                        </p>
+                        <ul class="cs-item-p">
+                            <li><em>Positional Therapy – Is it Especially Helpful for Full Face CPAP Mask Patients?</em> | August 2016</li>
+                            <li><em>How to Work Hard at PAP Adherence </em> | May 2016</li>
+                        </ul>
                     </li>
                     <li class="cs-faq-item">
                         <button class="cs-button">
@@ -357,18 +361,21 @@ Michigan Sleep Diagnostics and Research Center | Beecher Rd Flint, MI 48532
                                 RT Magazine: For Decision Makers in Respiratory Care
                             </span>
                         </button>
-                        <p class="cs-item-p">
-                            Proven ability to lead and train multidisciplinary teams. Skilled in fostering collaboration, resolving conflicts, and enhancing team performance to achieve organizational goals.
-                        </p>
+                        <ul class="cs-item-p">
+                            <li><em>Getting the Real Story: Raising the Bar for Compliance</em> | June 2008</li>
+                        </ul>
                     </li>
+                </ul>
+                <ul class="cs-faq-group cs-hidden" data-category="six">
+                    <!-- Active class added as default -->
                     <li class="cs-faq-item">
                         <button class="cs-button">
                             <span class="cs-button-text">
-                                Accreditation and Policy Development
+                                Refrences
                             </span>
                         </button>
                         <p class="cs-item-p">
-                            ●	Getting the Real Story: Raising the Bar for Compliance, June 2008
+                            Available upon request. References include former supervisors, colleagues, physicians, and business associates I have collaborated with
                         </p>
                     </li>
                 </ul>
